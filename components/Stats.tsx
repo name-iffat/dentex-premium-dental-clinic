@@ -7,13 +7,13 @@ import { motion, useSpring, useTransform, useInView } from 'framer-motion';
 const Counter = ({ value, suffix = '', decimals = 0, delay = 0 }: { value: number, suffix?: string, decimals?: number, delay?: number }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-20px" });
-  
-  const spring = useSpring(0, { 
-    mass: 0.8, 
-    stiffness: 75, 
-    damping: 15 
+
+  const spring = useSpring(0, {
+    mass: 0.8,
+    stiffness: 75,
+    damping: 15
   });
-  
+
   const display = useTransform(spring, (current) => current.toFixed(decimals));
 
   useEffect(() => {
@@ -38,17 +38,17 @@ export const Stats: React.FC = () => {
     <section className="py-12 bg-white border-b border-slate-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          
+
           {/* Google Rating */}
           <FadeIn delay={0.0} className="flex items-center gap-4 p-4 rounded-xl hover:shadow-lg transition-shadow border border-transparent hover:border-slate-100">
             <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-md">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="Google" className="w-8 h-8" />
+              <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google" className="w-8 h-8" />
             </div>
             <div>
               <div className="text-sm text-slate-500 font-medium">Google Rating</div>
               <div className="flex items-center gap-1">
                 <span className="text-2xl font-bold text-slate-900 flex">
-                   <Counter value={4.8} decimals={1} delay={0.2} />
+                  <Counter value={4.8} decimals={1} delay={0.2} />
                 </span>
                 <div className="flex text-yellow-400">
                   <Star size={16} fill="currentColor" />
