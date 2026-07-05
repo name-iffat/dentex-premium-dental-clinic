@@ -18,7 +18,7 @@ export const Hero: React.FC = () => {
             
             <FadeIn delay={0.2}>
               <p className="text-lg text-slate-600 mb-8 max-w-lg leading-relaxed">
-                Our experienced team is dedicated to providing you with personalized, high-quality dental care in a comfortable and caring environment.
+                Our experienced team is dedicated to providing you with personalised, high-quality dental care in a comfortable and caring environment.
               </p>
             </FadeIn>
 

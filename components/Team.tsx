@@ -5,17 +5,17 @@ import { FadeIn } from './ui/FadeIn';
 const doctors = [
   {
     name: "Dr. Michael Johnson",
-    title: "DDS - Lead Dentist",
+    title: "BDS (Hons) - Lead Dentist",
     image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=2070&auto=format&fit=crop"
   },
   {
     name: "Dr. Topon Sorma",
-    title: "DDS - Lead Dentist",
+    title: "BDS (Hons) - Lead Dentist",
     image: "https://images.unsplash.com/photo-1537368910025-700350fe46c7?q=80&w=2070&auto=format&fit=crop"
   },
   {
     name: "Dr. Raihan Ahmed",
-    title: "DDS - Lead Dentist",
+    title: "BDS (Hons) - Lead Dentist",
     image: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=1964&auto=format&fit=crop"
   }
 ];
@@ -28,7 +28,7 @@ export const Team: React.FC = () => {
             <FadeIn>
                 <h2 className="text-3xl md:text-5xl font-serif font-bold text-slate-900 mb-6">Meet our dental experts</h2>
                 <p className="text-slate-600 max-w-2xl mx-auto">
-                    Our team of skilled professionals is dedicated to ensuring every patient receives personalized attention and the highest quality care.
+                    Our team of skilled professionals is dedicated to ensuring every patient receives personalised attention and the highest quality care.
                 </p>
             </FadeIn>
         </div>

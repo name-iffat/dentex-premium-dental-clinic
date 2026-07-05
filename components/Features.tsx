@@ -49,7 +49,7 @@ export const Features: React.FC = () => {
                 <FeatureItem 
                     number="03" 
                     title="Family-friendly Environment" 
-                    text="We also recognize the importance of affordable and accessible dental care, which is why we offer flexible scheduling, convenient."
+                    text="We also recognise the importance of affordable and accessible dental care, which is why we offer flexible scheduling, convenient."
                     delay={0.4}
                 />
             </div>

@@ -20,7 +20,7 @@ export const Benefits: React.FC = () => {
             </FadeIn>
 
             <div className="space-y-6">
-              <BenefitItem title="Personalized care for every patient" text="We take the time to understand your needs and provide customized treatments designed to achieve your best smile effective treatments." delay={0.2} />
+              <BenefitItem title="Personalized care for every patient" text="We take the time to understand your needs and provide customised treatments designed to achieve your best smile effective treatments." delay={0.2} />
               <BenefitItem title="Comprehensive services under one roof" text="From routine cleanings to advanced restorative procedures, we offer a full range of dental services for the entire family effective." delay={0.4} />
             </div>
           </div>

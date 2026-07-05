@@ -49,23 +49,28 @@ export const Footer: React.FC = () => {
             <ul className="space-y-6 text-sm">
                 <li className="flex gap-3">
                     <Phone size={18} className="text-primary flex-shrink-0" />
-                    <span>+1-800-555-123</span>
+                    <span>+44 20 7946 0958</span>
                 </li>
                 <li className="flex gap-3">
                     <MapPin size={18} className="text-primary flex-shrink-0" />
-                    <span>553 Walsh Street, New York, NY 10014</span>
+                    <span>123 Harley Street, London, W1G 6AX</span>
                 </li>
                 <li className="flex gap-3">
                     <Mail size={18} className="text-primary flex-shrink-0" />
-                    <span>info@dentex.com</span>
+                    <span>info@dentex.co.uk</span>
                 </li>
             </ul>
+            <div className="mt-6 pt-6 border-t border-slate-800">
+              <p className="text-xs text-slate-500 leading-relaxed">
+                General Dental Council registered. Complaints procedure available on request.
+              </p>
+            </div>
           </div>
 
         </div>
 
         <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-slate-500">
-            <p>&copy; 2024 Dentex. All rights reserved.</p>
+            <p>&copy; 2025 Dentex. All rights reserved.</p>
             <div className="flex gap-6 mt-4 md:mt-0">
                 <a href="#" className="hover:text-white">Terms of Use</a>
                 <a href="#" className="hover:text-white">Privacy Policy</a>

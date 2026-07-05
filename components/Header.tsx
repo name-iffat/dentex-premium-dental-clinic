@@ -59,7 +59,7 @@ export const Header: React.FC = () => {
               <div className="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-primary">
                 <Phone size={16} />
               </div>
-              <span>+0123-456-789</span>
+              <span>+44 20 7946 0958</span>
             </div>
 
             {/* Mobile Toggle */}
@@ -135,7 +135,7 @@ export const Header: React.FC = () => {
                     <div className="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center text-primary">
                       <Phone size={16} />
                     </div>
-                    <span className="font-medium">+0123-456-789</span>
+                    <span className="font-medium">+44 20 7946 0958</span>
                   </div>
                   <a
                     href="#contact"

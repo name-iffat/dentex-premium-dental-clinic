@@ -13,8 +13,8 @@ const faqs = [
     answer: "It is generally recommended to visit the dentist every six months for a routine check-up and cleaning. However, your dentist may recommend more frequent visits depending on your oral health needs."
   },
   {
-    question: "Do you accept insurance?",
-    answer: "Yes, we accept most major dental insurance plans. Please contact our office to verify if we are in-network with your specific provider."
+    question: "Do you accept insurance and NHS patients?",
+    answer: "Yes, we accept NHS dental patients where available, as well as most major private insurance plans and Denplan. Please contact our practice to discuss your specific coverage or payment options."
   },
   {
     question: "How do I schedule an appointment?",

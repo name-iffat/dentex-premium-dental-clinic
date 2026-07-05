@@ -52,10 +52,10 @@ export const About: React.FC = () => {
             </FadeIn>
             <FadeIn delay={0.2}>
               <p className="text-slate-600 mb-6 leading-relaxed">
-                Our team of skilled professionals is dedicated to ensuring every patient receives personalized attention and the highest we're here to help you achieve the healthy.
+                Our team of skilled professionals is dedicated to ensuring every patient receives personalised attention and the highest we're here to help you achieve the healthy.
               </p>
               <p className="text-slate-600 mb-8 leading-relaxed">
-                Our experienced team is dedicated to providing you with personalized, high-quality dental care in a comfortable and caring environment. Whether you need a routine check-up or advanced dental treatments, we're here to help you achieve the healthy, beautiful smile you deserve.
+                Our experienced team is dedicated to providing you with personalised, high-quality dental care in a comfortable and caring environment. Whether you need a routine check-up or advanced dental treatments, we're here to help you achieve the healthy, beautiful smile you deserve.
               </p>
             </FadeIn>
             <FadeIn delay={0.4}>
