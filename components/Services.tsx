@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import { FadeIn } from './ui/FadeIn';
+import { SmileMark } from './ui/Decoration';
 import dental5 from './ui/assets/dental-5.png';
 import dental4 from './ui/assets/dental-4.png';
 import dental3 from './ui/assets/dental-3.png';
@@ -8,7 +9,7 @@ import dental3 from './ui/assets/dental-3.png';
 const services = [
   {
     title: "Bridge restoration",
-    description: "From routine check-ups to advanced restorative procedures, we've got you covered routine check inpot.",
+    description: "Restore gaps in your smile with a dental bridge, planned around your comfort and needs.",
     image: dental4
   },
   {
@@ -18,15 +19,16 @@ const services = [
   },
   {
     title: "Fluoride treatment",
-    description: "Explore our full range of dental services into dental designed to keep your smile healthy need.",
+    description: "Help strengthen tooth enamel and protect your smile with preventive fluoride care.",
     image: dental5
   }
 ];
 
 export const Services: React.FC = () => {
   return (
-    <section id="services" className="py-20 lg:py-28 bg-dark text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="services" className="relative overflow-hidden py-20 lg:py-28 bg-dark text-white">
+      <SmileMark className="services-decoration" />
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <div className="text-center max-w-3xl mx-auto mb-16">
           <FadeIn>
@@ -34,7 +36,7 @@ export const Services: React.FC = () => {
           </FadeIn>
           <FadeIn delay={0.2}>
             <p className="text-slate-300">
-              Our services include preventive care to keep your smile healthy, restorative treatments to repair and enhance your healthy dental.
+              From preventive check-ups to restorative and cosmetic treatments, find care that fits your smile.
             </p>
           </FadeIn>
         </div>
@@ -55,7 +57,7 @@ export const Services: React.FC = () => {
                   </div>
                 </div>
               </div>
-              <h3 className="text-2xl font-serif font-bold mb-3 group-hover:text-primary transition-colors">{service.title}</h3>
+              <h3 className="text-2xl font-serif font-bold mb-3 group-hover:text-blue-300 transition-colors">{service.title}</h3>
               <p className="text-slate-400 leading-relaxed text-sm">{service.description}</p>
             </FadeIn>
           ))}

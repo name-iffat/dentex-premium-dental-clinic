@@ -1,70 +1,41 @@
 import React from 'react';
+import { ArrowDownRight, ArrowUpRight } from 'lucide-react';
 import { FadeIn } from './ui/FadeIn';
-import { motion } from 'framer-motion';
+import { SmileMark, SparkMark } from './ui/Decoration';
 
-export const Hero: React.FC = () => {
-  return (
-    <section className="relative pt-12 pb-20 lg:pt-20 lg:pb-28 overflow-hidden bg-slate-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Text Content */}
-          <div className="order-2 lg:order-1 relative z-10">
-            <FadeIn>
-              <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold font-serif text-slate-900 leading-tight mb-6">
-                Expert care for a <br/>
-                <span className="text-slate-900">lifetime of smiles</span>
-              </h1>
-            </FadeIn>
-            
-            <FadeIn delay={0.2}>
-              <p className="text-lg text-slate-600 mb-8 max-w-lg leading-relaxed">
-                Our experienced team is dedicated to providing you with personalised, high-quality dental care in a comfortable and caring environment.
-              </p>
-            </FadeIn>
-
-            <FadeIn delay={0.4} className="flex flex-wrap gap-4">
-              <motion.button 
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-primary hover:bg-blue-700 text-white px-8 py-3.5 rounded-md font-medium transition-colors shadow-lg shadow-blue-500/30"
-              >
-                Book A Callback
-              </motion.button>
-              <motion.button 
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-white border border-slate-300 hover:border-slate-800 hover:bg-slate-50 text-slate-800 px-8 py-3.5 rounded-md font-medium transition-all"
-              >
-                Browse Services
-              </motion.button>
-            </FadeIn>
-          </div>
-
-          {/* Image */}
-          <div className="order-1 lg:order-2 relative">
-            <FadeIn direction="left" delay={0.2}>
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                 <img 
-                  src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=2068&auto=format&fit=crop" 
-                  alt="Dentist checking patient" 
-                  className="w-full h-[400px] lg:h-[600px] object-cover"
-                />
-                {/* Decorative element */}
-                <motion.div 
-                    animate={{ scale: [1, 1.2, 1], opacity: [0.2, 0.4, 0.2] }}
-                    transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                    className="absolute -bottom-6 -left-6 w-24 h-24 bg-yellow-400 rounded-full blur-2xl opacity-20"
-                ></motion.div>
-                <motion.div 
-                    animate={{ scale: [1, 1.3, 1], opacity: [0.2, 0.5, 0.2] }}
-                    transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                    className="absolute top-10 right-10 w-32 h-32 bg-blue-400 rounded-full blur-3xl opacity-20"
-                ></motion.div>
-              </div>
-            </FadeIn>
-          </div>
+export const Hero: React.FC = () => (
+  <section className="dentex-hero relative overflow-hidden pt-12 pb-16 lg:pt-20 lg:pb-24">
+    <SmileMark className="hero-smile" />
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div>
+          <FadeIn>
+            <div className="hero-eyebrow"><span /> Dental care, with you in mind</div>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-serif leading-tight mb-6">
+              Expert care for a <span className="hero-highlight">lifetime of smiles</span>
+            </h1>
+          </FadeIn>
+          <FadeIn delay={0.15}>
+            <p className="text-lg mb-8 max-w-lg leading-relaxed hero-description">
+              Personalised dental care, a team that listens, and a space where you can feel at ease. Let's find your reason to smile.
+            </p>
+          </FadeIn>
+          <FadeIn delay={0.25} className="flex flex-wrap gap-4">
+            <a href="#contact" className="hero-cta">Book a callback <ArrowUpRight size={20} aria-hidden="true" /></a>
+            <a href="#services" className="hero-secondary">Explore treatments <ArrowDownRight size={20} aria-hidden="true" /></a>
+          </FadeIn>
+          <FadeIn delay={0.35} className="hero-footnote">Personalised dental care <span aria-hidden="true">/</span> Malaysia</FadeIn>
+        </div>
+        <div className="hero-visual relative">
+          <FadeIn direction="left" delay={0.15}>
+            <div className="hero-photo">
+              <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=2068&auto=format&fit=crop" alt="Bright, welcoming dental treatment room" className="w-full h-[360px] sm:h-[460px] lg:h-[560px] object-cover" fetchPriority="high" />
+            </div>
+          </FadeIn>
+          <SparkMark className="hero-spark" />
+          <div className="hero-note"><SmileMark className="w-16 h-12" /><span>A little care.<br /><strong>A lasting smile.</strong></span></div>
         </div>
       </div>
-    </section>
-  );
-};
+    </div>
+  </section>
+);

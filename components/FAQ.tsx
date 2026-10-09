@@ -1,3 +1,4 @@
+import { ContourBackdrop, SparkMark, SmileMark } from './ui/Decoration';
 import React, { useState } from 'react';
 import { Plus, Minus } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -13,8 +14,8 @@ const faqs = [
     answer: "It is generally recommended to visit the dentist every six months for a routine check-up and cleaning. However, your dentist may recommend more frequent visits depending on your oral health needs."
   },
   {
-    question: "Do you accept insurance and NHS patients?",
-    answer: "Yes, we accept NHS dental patients where available, as well as most major private insurance plans and Denplan. Please contact our practice to discuss your specific coverage or payment options."
+    question: "Can I use insurance or a company dental panel?",
+    answer: "Please check with our team before your visit. Dental benefits, panel eligibility and claim requirements depend on your insurer or employer. We can help you confirm the details for your appointment."
   },
   {
     question: "How do I schedule an appointment?",
@@ -34,11 +35,12 @@ export const FAQ: React.FC = () => {
   };
 
   return (
-    <section id="faq" className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="faq" className="faq-backdrop py-20 bg-white">
+      <ContourBackdrop className="faq-contours" />
+      <div className="section-content max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
 
-          <div className="lg:col-span-1">
+          <div className="lg:col-span-1 faq-intro">
             <FadeIn>
               <h2 className="text-3xl md:text-5xl font-serif font-bold text-slate-900 mb-6">Frequently asked questions</h2>
               <p className="text-slate-600 mb-8">
@@ -56,6 +58,7 @@ export const FAQ: React.FC = () => {
                 <FadeIn key={index} delay={index * 0.1} fullWidth>
                   <div className="border border-slate-200 rounded-xl overflow-hidden">
                     <button
+                      aria-expanded={openIndex === index}
                       onClick={() => toggle(index)}
                       className="w-full flex items-center justify-between p-6 bg-white hover:bg-slate-50 transition-colors text-left"
                     >

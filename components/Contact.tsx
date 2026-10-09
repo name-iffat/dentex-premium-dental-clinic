@@ -1,11 +1,13 @@
+import { ContourBackdrop, SparkMark, SmileMark } from './ui/Decoration';
 import React from 'react';
 import { FadeIn } from './ui/FadeIn';
 
 export const Contact: React.FC = () => {
   return (
-    <section id="contact" className="py-20 lg:py-28 bg-slate-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-white rounded-3xl shadow-xl overflow-hidden">
+    <section id="contact" className="contact-backdrop py-20 lg:py-28 bg-slate-50">
+      <ContourBackdrop className="contact-contours" /><SparkMark className="contact-spark" />
+      <div className="section-content max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="contact-panel bg-white rounded-3xl shadow-xl overflow-hidden">
             <div className="grid grid-cols-1 lg:grid-cols-2">
                 
                 {/* Image Side */}

@@ -1,3 +1,4 @@
+import { clinic } from '../clinic';
 import React, { useState, useEffect } from 'react';
 import { Phone, Menu, X, Search } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -59,7 +60,7 @@ export const Header: React.FC = () => {
               <div className="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-primary">
                 <Phone size={16} />
               </div>
-              <span>+44 20 7946 0958</span>
+              <span>{clinic.phone || 'Book an appointment'}</span>
             </div>
 
             {/* Mobile Toggle */}
@@ -135,7 +136,7 @@ export const Header: React.FC = () => {
                     <div className="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center text-primary">
                       <Phone size={16} />
                     </div>
-                    <span className="font-medium">+44 20 7946 0958</span>
+                    <span className="font-medium">{clinic.phone || 'Book an appointment'}</span>
                   </div>
                   <a
                     href="#contact"

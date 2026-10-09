@@ -1,18 +1,23 @@
+import { ContourBackdrop, SparkMark, SmileMark } from './ui/Decoration';
 import React from 'react';
 import { FadeIn } from './ui/FadeIn';
+import gentleCare from './ui/assets/gentle-care.png';
+import dentalTechnology from './ui/assets/dental-technology.png';
+import familyCare from './ui/assets/family-care.png';
 
 export const Features: React.FC = () => {
   return (
-    <section className="py-20 lg:py-28 bg-dark text-white overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="features-backdrop py-20 lg:py-28 bg-dark text-white overflow-hidden">
+      <ContourBackdrop className="feature-contours" />
+      <div className="section-content max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            
+
           {/* Image Side */}
           <FadeIn direction="right" className="relative order-2 lg:order-1">
-             <div className="rounded-2xl overflow-hidden h-[500px] shadow-2xl">
-                 <img 
-                    src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=2080&auto=format&fit=crop" 
-                    alt="Dental procedure" 
+             <div className="rounded-2xl overflow-hidden h-[380px] sm:h-[500px] shadow-2xl">
+                 <img
+                    src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=2080&auto=format&fit=crop"
+                    alt="Dental procedure"
                     className="w-full h-full object-cover"
                  />
              </div>
@@ -34,21 +39,21 @@ export const Features: React.FC = () => {
             </FadeIn>
 
             <div className="space-y-8">
-                <FeatureItem 
-                    number="01" 
-                    title="Pain-Free Dentistry" 
+                <FeatureItem
+                    image={gentleCare}
+                    title="Pain-Free Dentistry"
                     text="We start by thoroughly understanding your project requirements, goals, and vision. Our team conducts site evaluations."
                     delay={0.2}
                 />
-                <FeatureItem 
-                    number="02" 
-                    title="State-of-the-Art Technology" 
+                <FeatureItem
+                    image={dentalTechnology}
+                    title="State-of-the-Art Technology"
                     text="We believe that a healthy, beautiful smile is the foundation of overall well-being vision. That's why we are committed."
                     delay={0.3}
                 />
-                <FeatureItem 
-                    number="03" 
-                    title="Family-friendly Environment" 
+                <FeatureItem
+                    image={familyCare}
+                    title="Family-friendly Environment"
                     text="We also recognise the importance of affordable and accessible dental care, which is why we offer flexible scheduling, convenient."
                     delay={0.4}
                 />
@@ -61,11 +66,9 @@ export const Features: React.FC = () => {
   );
 };
 
-const FeatureItem: React.FC<{ number: string; title: string; text: string; delay: number }> = ({ number, title, text, delay }) => (
+const FeatureItem: React.FC<{ image: string; title: string; text: string; delay: number }> = ({ image, title, text, delay }) => (
     <FadeIn delay={delay} className="flex gap-6">
-        <div className="w-12 h-12 rounded-full border border-slate-700 flex-shrink-0 flex items-center justify-center text-lg font-bold text-white">
-            {number}
-        </div>
+        <img src={image} alt="" aria-hidden="true" loading="lazy" width="88" height="88" className="feature-illustration" />
         <div>
             <h4 className="text-xl font-bold font-serif mb-2">{title}</h4>
             <p className="text-slate-400 text-sm leading-relaxed">{text}</p>

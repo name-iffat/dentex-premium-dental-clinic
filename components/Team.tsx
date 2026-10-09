@@ -1,3 +1,4 @@
+import { ContourBackdrop, SparkMark, SmileMark } from './ui/Decoration';
 import React from 'react';
 import { Facebook, Twitter, Instagram } from 'lucide-react';
 import { FadeIn } from './ui/FadeIn';
@@ -22,8 +23,9 @@ const doctors = [
 
 export const Team: React.FC = () => {
   return (
-    <section className="py-20 lg:py-28 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="team-backdrop py-20 lg:py-28 bg-white">
+      <SmileMark className="team-smile" />
+      <div className="section-content max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
             <FadeIn>
                 <h2 className="text-3xl md:text-5xl font-serif font-bold text-slate-900 mb-6">Meet our dental experts</h2>
@@ -35,7 +37,7 @@ export const Team: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {doctors.map((doctor, index) => (
-                <FadeIn key={index} delay={index * 0.2} className="group">
+                <FadeIn key={index} delay={index * 0.2} className="group team-member">
                     <div className="relative overflow-hidden rounded-xl mb-6 aspect-[4/5] bg-slate-100">
                         <img 
                             src={doctor.image} 

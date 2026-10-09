@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 
 interface FadeInProps {
   children: React.ReactNode;
@@ -16,6 +16,7 @@ export const FadeIn: React.FC<FadeInProps> = ({
   className = '',
   fullWidth = false
 }) => {
+  const reducedMotion = useReducedMotion();
   const variants = {
     hidden: {
       opacity: 0,
@@ -36,10 +37,10 @@ export const FadeIn: React.FC<FadeInProps> = ({
 
   return (
     <motion.div
-      initial="hidden"
+      initial={reducedMotion ? false : "hidden"}
       whileInView="visible"
       viewport={{ once: true, margin: "-50px" }}
-      variants={variants}
+      variants={reducedMotion ? undefined : variants}
       className={`${className} ${fullWidth ? 'w-full' : ''}`}
     >
       {children}

@@ -1,3 +1,4 @@
+import { ContourBackdrop, SparkMark, SmileMark } from './ui/Decoration';
 import React, { useState } from 'react';
 import { Star, ArrowLeft, ArrowRight, Quote } from 'lucide-react';
 import { FadeIn } from './ui/FadeIn';
@@ -34,8 +35,9 @@ export const Testimonials: React.FC = () => {
   const prev = () => setCurrent((prev) => (prev - 1 + reviews.length) % reviews.length);
 
   return (
-    <section className="py-20 lg:py-28 bg-slate-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="patient-stories" className="testimonials-backdrop py-20 lg:py-28 bg-slate-50">
+      <ContourBackdrop className="testimonial-contours" /><SparkMark className="testimonial-spark" />
+      <div className="section-content max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="mb-12 text-center lg:text-left">
             <FadeIn>
@@ -67,7 +69,7 @@ export const Testimonials: React.FC = () => {
 
             {/* Content Side */}
             <div className="w-full lg:w-1/2">
-                <div className="bg-white p-8 md:p-12 rounded-2xl shadow-lg relative">
+                <div className="testimonial-quote p-6 sm:p-8 md:p-12 relative">
                     <div className="absolute top-8 right-8 text-slate-100">
                         <Quote size={80} fill="currentColor" />
                     </div>
@@ -81,7 +83,7 @@ export const Testimonials: React.FC = () => {
                                 exit={{ opacity: 0, x: -20 }}
                                 transition={{ duration: 0.3 }}
                             >
-                                <div className="flex items-center gap-4 mb-6">
+                                <div className="flex flex-wrap items-center gap-4 mb-6">
                                     <img src={reviews[current].image} alt="" className="w-14 h-14 rounded-full object-cover" />
                                     <div>
                                         <h4 className="font-bold text-slate-900">{reviews[current].name}</h4>
@@ -101,10 +103,10 @@ export const Testimonials: React.FC = () => {
                          </AnimatePresence>
 
                         <div className="flex gap-4">
-                            <button onClick={prev} className="w-12 h-12 rounded-full border border-slate-200 flex items-center justify-center text-slate-600 hover:bg-primary hover:text-white hover:border-primary transition-all">
+                            <button aria-label="Previous review" onClick={prev} className="w-12 h-12 rounded-full border border-slate-200 flex items-center justify-center text-slate-600 hover:bg-primary hover:text-white hover:border-primary transition-all">
                                 <ArrowLeft size={20} />
                             </button>
-                            <button onClick={next} className="w-12 h-12 rounded-full border border-slate-200 flex items-center justify-center text-slate-600 hover:bg-primary hover:text-white hover:border-primary transition-all">
+                            <button aria-label="Next review" onClick={next} className="w-12 h-12 rounded-full border border-slate-200 flex items-center justify-center text-slate-600 hover:bg-primary hover:text-white hover:border-primary transition-all">
                                 <ArrowRight size={20} />
                             </button>
                         </div>
